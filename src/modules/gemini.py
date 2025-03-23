@@ -18,7 +18,9 @@ def generate_tweet_prompt():
         "Write a brief existential observation that references the theme of courage despite fear. Keep it under 200 characters. Without any twitter hashtags, markdown formatting and in one line.",
         "Generate a philosophical one-liner about finding courage in a scary world, inspired by the show Courage the Cowardly Dog. Without any twitter hashtags, markdown formatting and in one line.",
         "Write a short, philosophical tweet that subtly references 'Nowhere' from Courage The Cowardly Dog as both a place and a metaphorical concept. Without any twitter hashtags, markdown formatting and in one line.",
-        "Generate a short tweet directly referencing quotes and easter eggs from the show - Courage the Cowardly Dog"
+        "Generate a short tweet directly referencing quotes and easter eggs from the show - Courage the Cowardly Dog. Without any twitter hashtags, markdown formatting and in one line.",
+        "Quote a random saying/quote from Courage the Cowardly Dog.  Without any twitter hashtags, markdown formatting and in one line.",
+        "Say a random poem/sonnet (under 200 characters) and also quote the author .Without any twitter hashtags, markdown formatting and in one line."
     ]
 
     return choice(prompts)
