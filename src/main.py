@@ -1,10 +1,15 @@
-import tweepy
 from modules.client import tweeter
+from modules.gemini import generate_tweet
 
 
 def main():
 
     client = tweeter()
+    random_tweet = generate_tweet()
 
-    test_tweet = "Return the Slab!!!"
-    client.create_tweet(text = test_tweet)
+    client.create_tweet(text = random_tweet)
+
+
+if __name__ == "__main__":
+
+    main()
