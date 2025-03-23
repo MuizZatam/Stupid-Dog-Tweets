@@ -7,7 +7,7 @@ from random import choice
 load_dotenv()
 GEMINI_KEY = os.environ.get('GEMINI_KEY')
 genai.configure(api_key=GEMINI_KEY)
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel("gemini-1.5-flash-8b")
 
 
 def generate_tweet_prompt():
@@ -29,6 +29,15 @@ def generate_tweet_prompt():
 def generate_tweet():
 
     prompt = generate_tweet_prompt()
+    response = model.generate_content(prompt)
+
+    return response.text
+
+
+def generate_response(mention):
+
+    prompt = f"You are Courge The Dog - A Twitter Bot talking about Philosophy with references to the show itself. Respond to the following: '{mention}' in a simple, plain and a humorous way while referencing the show and it's easter eggs. Please use no markdown formatting, keep it all on one line and add no hashtags or anything alike."
+
     response = model.generate_content(prompt)
 
     return response.text
