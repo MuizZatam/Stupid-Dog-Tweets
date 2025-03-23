@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 tweepy = "*"
 python-dotenv = "*"
+google-generativeai = "*"
 
 [dev-packages]
 
