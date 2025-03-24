@@ -20,4 +20,7 @@ def tweeter():
         access_token_secret=ACCESS_TOKEN_SECRET
     )
 
-    return client
+    auth = tweepy.OAuth1UserHandler(API_KEY, API_KEY_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+    api = tweepy.API(auth)
+
+    return client, auth, api
